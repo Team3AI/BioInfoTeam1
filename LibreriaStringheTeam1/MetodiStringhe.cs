@@ -12,7 +12,7 @@ namespace LibreriaStringheTeam1
         }
         public static string LetturaFileResistente()
         {
-            string resistente = File.ReadAllText("testo_r.txt"); 
+            string resistente = File.ReadAllText("testo_r.txt");
             return resistente;
         }
         public static int LunghezzaStringa()
