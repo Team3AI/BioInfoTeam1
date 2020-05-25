@@ -3,11 +3,11 @@ using System;
 
 namespace Test
 {
-    class Program
+    class Test
     {
         static void Main(string[] args)
         {
-            int r = MetodiStringhe.ConfrontoStringhe();
+            string r = MetodiStringhe.DNAidentico();
             Console.WriteLine(r);
         }
     }

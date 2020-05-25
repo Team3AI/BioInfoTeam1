@@ -47,13 +47,19 @@ namespace LibreriaStringheTeam1
             string identica = resistente.Substring(inizio, lunghezza);
             return identica;
 
-
         }
         public static int CaratteriDifferenti()
         {
             string resistente = LetturaFileResistente();
             string sensibile = LetturaFileSensibile();
 
+            int index;
+            int c = 0 ;
+            int x = Math.Min(resistente.Length, sensibile.Length);
+            for (index = 0; index < x; index++)
+                if (resistente[index] != sensibile[index])
+                    c++;
+            return c;
 
         }
     }
