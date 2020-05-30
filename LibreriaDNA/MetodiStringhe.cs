@@ -17,13 +17,9 @@ namespace LibreriaStringheTeam1
         }
         public static int LunghezzaStringa()
         {
-            int c = 0;
+
             string sensibile = LetturaFileSensibile();
-            for (int i = 0; i < sensibile.Length; i++)
-            {
-                c++;
-            }
-            return c;
+            return sensibile.Length;
         }
         public static int ConfrontoStringhe()
         {
@@ -42,11 +38,19 @@ namespace LibreriaStringheTeam1
             string resistente = LetturaFileResistente();
             string sensibile = LetturaFileSensibile();
 
-            int inizio = 0;
-            int lunghezza = ConfrontoStringhe() - 1;
-            string identica = resistente.Substring(inizio, lunghezza);
-            return identica;
-
+            if (ConfrontoStringhe() == 0)
+            {
+                return "Varia il primo carattere";
+            }
+            else
+            {
+                int inizio = 0;
+                int lunghezza = ConfrontoStringhe() - 1;
+                string identica = resistente.Substring(inizio, lunghezza);
+                return identica;
+                
+            }
+            
         }
         public static int CaratteriDifferenti()
         {

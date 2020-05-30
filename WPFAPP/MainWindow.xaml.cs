@@ -54,6 +54,10 @@ namespace WPFAPP
                 int a = MetodiStringhe.CaratteriDifferenti();
                 risultato.Content = $"Il numero di caratteri che variano tra le due stringhe è {a}";
             }
+            if (scelta.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selezionare un'operazione da svolgere", "Attenzione", MessageBoxButton.OK);
+            }
         }
     }
 }
